@@ -6,6 +6,7 @@ const hiddenElements = document.querySelectorAll('.hidden')
 import { OpenAI } from "langchain/llms/openai";
 import { loadQAStuffChain } from "langchain/chains";
 import { Document } from "langchain/document";
+require("dotenv").config();
 
 // Load the documents
 const docs = [
@@ -53,7 +54,7 @@ const docs = [
 
 /* get message method called when send button is pressed, this is where the AI makes the call based on user input and document information */
 async function getMessage(){
-  const llmA = new OpenAI({openAIApiKey: "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"});
+  const llmA = new OpenAI({openAIApiKey: process.env.APIKEY});
   const chainA = loadQAStuffChain(llmA);
   const resA = await chainA.call({
     input_documents: docs,
