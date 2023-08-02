@@ -6,7 +6,7 @@ const hiddenElements = document.querySelectorAll('.hidden')
 import { OpenAI } from "https://esm.sh/langchain/llms/openai";
 import { loadQAStuffChain } from "https://esm.sh/langchain/chains";
 import { Document } from "https://esm.sh/langchain/document";
-require("dotenv").config();
+import { config } from "dotenv";
 
 // Load the documents
 const docs = [
