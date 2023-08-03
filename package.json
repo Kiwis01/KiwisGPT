@@ -1,20 +1,25 @@
 {
-  "name": "KiwisGPT",
+  "name": "kiwisgpt",
   "version": "1.0.0",
-  "type": "module",
-  "main": "script.js",
+  "description": "AI chatbot with my personal info as reference for any questions regarding personal experiences",
+  "main": "application.js",
+  "private": true,
   "scripts": {
     "dev": "node script.js"
   },
-  "license": "MIT",
   "dependencies": {
     "axios": "^1.4.0",
-    "dotenv": "^16.3.0",
+    "dotenv": "^16.3.1",
     "langchain": "^0.0.102",
     "openai": "^3.3.0",
-    "serpapi": "^1.1.1"
+    "serpapi": "^1.1.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "keywords": [],
   "author": "",
-  "description": ""
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1"
+  }
 }
