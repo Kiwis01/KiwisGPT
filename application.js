@@ -3,9 +3,9 @@ const outPutElement = document.querySelector('#output')
 const inputElement = document.querySelector('input')
 const hiddenElements = document.querySelectorAll('.hidden')
 
-import { OpenAI } from "langchain/llms/openai";
-import { loadQAStuffChain } from "langchain/chains";
-import { Document } from "langchain/document";
+import { OpenAI } from "https://esm.sh/langchain/llms/openai";
+import { loadQAStuffChain } from "https://esm.sh/langchain/chains";
+import { Document } from "https://esm.sh/langchain/document";
 
 // Load the documents
 const docs = [
