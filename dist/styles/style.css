@@ -13,12 +13,45 @@ section{
     align-content: center;
     min-height: 100vh;
 }
+/* Navigation bar */
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
 
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+    /* hover animation */
+a:hover {
+    background-color: #555;
+  }
+    /* Responsive styles */
+@media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    a {
+      margin-bottom: 10px;
+    }
+  }
+
+/* sections animation positions */
 .hidden{
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .show{
@@ -27,8 +60,13 @@ section{
     transform: translateX(0);
 }
 
+/* images */
 .logos{
     display: flex;
+}
+
+.logos:nth-child(2){
+    transition-delay: 200ms;
 }
 
 /* KiwisGPT */
@@ -62,7 +100,7 @@ input{
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     font-size: 20px;
-    padding: 12px 15px;
+    padding: 12px 40px;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.05) 0 54px 55px,
     rgba(0,0,0,0.05) 0 -12px 30px,
@@ -76,47 +114,108 @@ input:focus{
 }
 
 .input-container{
+    display: flex;
     position: relative;
     width: 100%;
     max-width: 650px;
+    flex:1
 }
 
 .input-container #submit{
     position: absolute;
-    right: 0;
-    bottom: 15px;
+    right: 15px;
+    bottom: 12px;
+    align-self: flex-end;
+}
+/*Submit button for kiwisgpt */
+
+.submit-icon:hover {
+    transform: scale(2);
+  }
+
+/* Education */
+.edu{
+    display: flex;
+    opacity:80%;
 }
 
-
-
-
-/* If more than one logo
-.logo:nth-child(2){
-    transition-delay: 200ms;
+.educ1{
+    width: 100%;
+    height: 200px;
+    
 }
 
-.logo:nth-child(3){
-    transition-delay: 400ms;
+/* Projects */
+.proj {
+    max-width: 600px;
+    margin: 0 auto;
 }
-*/
 
-/* If buttons and want hover animation
-  button {
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    border: none;
-    color: #fdcc04;
-    background: #000;
-    cursor: pointer;
-    border-radius: 50px;
+.proj-item {
+    display: grid;
+    grid-template-columns: 1fr 130px; /* Adjust the width of the image column as needed */
+    column-gap: 20px; /* Adjust the gap between text and image */
+    align-items: center;
+    margin-bottom: 20px; /* Adjust the spacing between items */
+}
 
-    transition: transform 0.3s ease 0s;
+.proj-des p {
+    margin: 0;
+}
 
+.proj-img {
+    width: 130px;
+    height: 130px;
+}
+
+/* contact */
+h6{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0px 0;
+}
+
+.cont{
+    display: flex;
+    opacity:80%;
+}
+
+.contpics1{
+    width: 100px;
+    height: 100px;
+}
+
+.contpics2{
+    width: 180px;
+    height: 100px;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
   }
   
-  button:hover {
-    transform: translateY(-10px);
-    background: #fff;
-    color: #000;
+  .scroll-to-top:hover {
+    background-color: #555;
   }
-*/
+
+  /* Notification alert */
+  .notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
