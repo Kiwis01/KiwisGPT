@@ -145,7 +145,19 @@ input:focus{
     
 }
 
+h4{
+    font-size: 33px;
+    font-weight: 600;
+    
+}
+
 /* Projects */
+h3{
+    font-size: 33px;
+    font-weight: 600;
+    
+}
+
 .proj {
     max-width: 600px;
     margin: 0 auto;
@@ -173,6 +185,7 @@ h6{
     font-size: 20px;
     font-weight: 600;
     padding: 0px 0;
+    position: center;
 }
 
 .cont{
